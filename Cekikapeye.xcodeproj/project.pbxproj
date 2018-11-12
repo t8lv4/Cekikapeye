@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		C9C14FDC20B32832001DE401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C14FDB20B32832001DE401 /* AppDelegate.swift */; };
-		C9C14FDE20B32832001DE401 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C14FDD20B32832001DE401 /* ViewController.swift */; };
 		C9C14FE120B32832001DE401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C14FDF20B32832001DE401 /* Main.storyboard */; };
 		C9C14FE320B32833001DE401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C14FE220B32833001DE401 /* Assets.xcassets */; };
 		C9C14FE620B32833001DE401 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C14FE420B32833001DE401 /* LaunchScreen.storyboard */; };
+		C9C14FF620B32F1D001DE401 /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C14FF520B32F1D001DE401 /* Spending.swift */; };
+		C9C14FF820B33307001DE401 /* SpendingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C14FF720B33307001DE401 /* SpendingService.swift */; };
+		C9C14FFC20B33FC5001DE401 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C14FFA20B33FC5001DE401 /* ListViewController.swift */; };
+		C9C14FFD20B33FC5001DE401 /* AddSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C14FFB20B33FC5001DE401 /* AddSpendingViewController.swift */; };
+		C9C1500520B6B017001DE401 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1500420B6B017001DE401 /* PeopleViewController.swift */; };
+		C9C1500720B6BB44001DE401 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1500620B6BB44001DE401 /* SettingsViewController.swift */; };
+		C9C1500920B6BB85001DE401 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1500820B6BB85001DE401 /* CircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C9C14FD820B32832001DE401 /* Cekikapeye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cekikapeye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C14FDB20B32832001DE401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9C14FDD20B32832001DE401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C9C14FE020B32832001DE401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9C14FE220B32833001DE401 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9C14FE520B32833001DE401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9C14FE720B32833001DE401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9C14FF520B32F1D001DE401 /* Spending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
+		C9C14FF720B33307001DE401 /* SpendingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingService.swift; sourceTree = "<group>"; };
+		C9C14FFA20B33FC5001DE401 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = Cekikapeye/Controller/ListViewController.swift; sourceTree = SOURCE_ROOT; };
+		C9C14FFB20B33FC5001DE401 /* AddSpendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddSpendingViewController.swift; path = Cekikapeye/Controller/AddSpendingViewController.swift; sourceTree = SOURCE_ROOT; };
+		C9C1500420B6B017001DE401 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		C9C1500620B6BB44001DE401 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C9C1500820B6BB85001DE401 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,53 @@
 		C9C14FDA20B32832001DE401 /* Cekikapeye */ = {
 			isa = PBXGroup;
 			children = (
+				C9C14FF420B32F0A001DE401 /* Model */,
+				C9C14FF920B33FA2001DE401 /* Controller */,
+				C9C14FF320B32EFC001DE401 /* View */,
+				C9C14FED20B32849001DE401 /* Supporting Files */,
+			);
+			path = Cekikapeye;
+			sourceTree = "<group>";
+		};
+		C9C14FED20B32849001DE401 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				C9C14FDB20B32832001DE401 /* AppDelegate.swift */,
-				C9C14FDD20B32832001DE401 /* ViewController.swift */,
-				C9C14FDF20B32832001DE401 /* Main.storyboard */,
 				C9C14FE220B32833001DE401 /* Assets.xcassets */,
 				C9C14FE420B32833001DE401 /* LaunchScreen.storyboard */,
 				C9C14FE720B32833001DE401 /* Info.plist */,
 			);
-			path = Cekikapeye;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9C14FF320B32EFC001DE401 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9C14FDF20B32832001DE401 /* Main.storyboard */,
+				C9C1500820B6BB85001DE401 /* CircleButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9C14FF420B32F0A001DE401 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9C14FF520B32F1D001DE401 /* Spending.swift */,
+				C9C14FF720B33307001DE401 /* SpendingService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9C14FF920B33FA2001DE401 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C9C14FFB20B33FC5001DE401 /* AddSpendingViewController.swift */,
+				C9C14FFA20B33FC5001DE401 /* ListViewController.swift */,
+				C9C1500420B6B017001DE401 /* PeopleViewController.swift */,
+				C9C1500620B6BB44001DE401 /* SettingsViewController.swift */,
+			);
+			name = Controller;
+			path = View/Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9C14FDE20B32832001DE401 /* ViewController.swift in Sources */,
+				C9C14FF820B33307001DE401 /* SpendingService.swift in Sources */,
+				C9C14FFD20B33FC5001DE401 /* AddSpendingViewController.swift in Sources */,
+				C9C1500720B6BB44001DE401 /* SettingsViewController.swift in Sources */,
+				C9C1500920B6BB85001DE401 /* CircleButton.swift in Sources */,
+				C9C14FF620B32F1D001DE401 /* Spending.swift in Sources */,
+				C9C14FFC20B33FC5001DE401 /* ListViewController.swift in Sources */,
+				C9C1500520B6B017001DE401 /* PeopleViewController.swift in Sources */,
 				C9C14FDC20B32832001DE401 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Cekikapeye/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Cekikapeye/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Cekikapeye/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Cekikapeye/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
