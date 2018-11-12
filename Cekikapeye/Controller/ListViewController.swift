@@ -31,7 +31,7 @@ extension ListViewController: UITableViewDataSource {
 
         let spending = SpendingService.shared.spendings[indexPath.row]
         cell.textLabel?.text = spending.content
-        cell.detailTextLabel?.text = "\(spending.amount) €"
+        cell.detailTextLabel?.text = "\(spending.amount) \(SettingsService.currency)"
 
         return cell
     }

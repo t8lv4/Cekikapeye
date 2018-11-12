@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		909F743A2199C0B700CC6341 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F74392199C0B700CC6341 /* SettingsService.swift */; };
 		C9C14FDC20B32832001DE401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C14FDB20B32832001DE401 /* AppDelegate.swift */; };
 		C9C14FE120B32832001DE401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C14FDF20B32832001DE401 /* Main.storyboard */; };
 		C9C14FE320B32833001DE401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C14FE220B32833001DE401 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		909F74392199C0B700CC6341 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		C9C14FD820B32832001DE401 /* Cekikapeye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cekikapeye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C14FDB20B32832001DE401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9C14FE020B32832001DE401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				C9C14FF520B32F1D001DE401 /* Spending.swift */,
 				C9C14FF720B33307001DE401 /* SpendingService.swift */,
+				909F74392199C0B700CC6341 /* SettingsService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					C9C14FD720B32832001DE401 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -186,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909F743A2199C0B700CC6341 /* SettingsService.swift in Sources */,
 				C9C14FF820B33307001DE401 /* SpendingService.swift in Sources */,
 				C9C14FFD20B33FC5001DE401 /* AddSpendingViewController.swift in Sources */,
 				C9C1500720B6BB44001DE401 /* SettingsViewController.swift in Sources */,
@@ -345,7 +350,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.Cekikapeye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -362,7 +367,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.Cekikapeye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

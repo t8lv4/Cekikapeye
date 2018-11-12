@@ -19,6 +19,6 @@ class SettingsViewController: UIViewController {
         guard let currency = sender.titleLabel?.text else { return }
         currencyLabel.text = currency
 
-        // TODO: Save currency
+        SettingsService.currency = currency
     }
 }
