@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class PeopleViewController: UIViewController {
     @IBOutlet weak var peopleTextView: UITextView!
@@ -15,6 +16,23 @@ class PeopleViewController: UIViewController {
     @IBAction func dismiss() {
         dismiss(animated: true, completion: nil)
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        displayPeople()
+    }
+
+    private func displayPeople() {
+        var peopleText = ""
+        for person in Person.all {
+            if let name = person.name {
+                peopleText += name + "\n"
+            }
+        }
+        peopleTextView.text = peopleText
+    }
+
 }
 
 extension PeopleViewController: UITextFieldDelegate {
@@ -34,6 +52,17 @@ extension PeopleViewController: UITextFieldDelegate {
         peopleTextView.text = people
         peopleTextField.text = ""
 
-        // TODO: Save person
+        savePerson(named: personName)
+        
+    }
+
+    private func savePerson(named name: String) {
+        // create entity instance with context
+        let person = Person(context: AppDelegate.viewContext)
+        // use
+        person.name = name
+        // save ocntext
+        do { try AppDelegate.viewContext.save() }
+        catch { print("name not saved")}
     }
 }

@@ -9,6 +9,9 @@
 import UIKit
 
 class AddSpendingViewController: UIViewController {
+
+    var persons = Person.all
+
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var personPickerView: UIPickerView!
@@ -28,15 +31,15 @@ class AddSpendingViewController: UIViewController {
 
 extension AddSpendingViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 0
+        return 1
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 0
+        return persons.count
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return ""
+        return persons[row].name
     }
 }
 

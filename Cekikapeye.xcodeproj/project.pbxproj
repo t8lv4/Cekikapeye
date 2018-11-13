@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		909F743A2199C0B700CC6341 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F74392199C0B700CC6341 /* SettingsService.swift */; };
+		909F7440219AE2DA00CC6341 /* Cekikapeye.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 909F743E219AE2DA00CC6341 /* Cekikapeye.xcdatamodeld */; };
+		909F7442219AE7BE00CC6341 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F7441219AE7BE00CC6341 /* Person.swift */; };
 		C9C14FDC20B32832001DE401 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C14FDB20B32832001DE401 /* AppDelegate.swift */; };
 		C9C14FE120B32832001DE401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C14FDF20B32832001DE401 /* Main.storyboard */; };
 		C9C14FE320B32833001DE401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C14FE220B32833001DE401 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		909F74392199C0B700CC6341 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		909F743F219AE2DA00CC6341 /* Cekikapeye.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cekikapeye.xcdatamodel; sourceTree = "<group>"; };
+		909F7441219AE7BE00CC6341 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		C9C14FD820B32832001DE401 /* Cekikapeye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cekikapeye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C14FDB20B32832001DE401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9C14FE020B32832001DE401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		C9C14FF420B32F0A001DE401 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				909F743E219AE2DA00CC6341 /* Cekikapeye.xcdatamodeld */,
+				909F7441219AE7BE00CC6341 /* Person.swift */,
 				C9C14FF520B32F1D001DE401 /* Spending.swift */,
 				C9C14FF720B33307001DE401 /* SpendingService.swift */,
 				909F74392199C0B700CC6341 /* SettingsService.swift */,
@@ -194,8 +200,10 @@
 				C9C14FF820B33307001DE401 /* SpendingService.swift in Sources */,
 				C9C14FFD20B33FC5001DE401 /* AddSpendingViewController.swift in Sources */,
 				C9C1500720B6BB44001DE401 /* SettingsViewController.swift in Sources */,
+				909F7442219AE7BE00CC6341 /* Person.swift in Sources */,
 				C9C1500920B6BB85001DE401 /* CircleButton.swift in Sources */,
 				C9C14FF620B32F1D001DE401 /* Spending.swift in Sources */,
+				909F7440219AE2DA00CC6341 /* Cekikapeye.xcdatamodeld in Sources */,
 				C9C14FFC20B33FC5001DE401 /* ListViewController.swift in Sources */,
 				C9C1500520B6B017001DE401 /* PeopleViewController.swift in Sources */,
 				C9C14FDC20B32832001DE401 /* AppDelegate.swift in Sources */,
@@ -394,6 +402,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		909F743E219AE2DA00CC6341 /* Cekikapeye.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				909F743F219AE2DA00CC6341 /* Cekikapeye.xcdatamodel */,
+			);
+			currentVersion = 909F743F219AE2DA00CC6341 /* Cekikapeye.xcdatamodel */;
+			path = Cekikapeye.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C9C14FD020B32832001DE401 /* Project object */;
 }
