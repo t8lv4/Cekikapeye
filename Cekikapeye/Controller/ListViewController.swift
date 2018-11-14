@@ -22,20 +22,36 @@ class ListViewController: UIViewController {
 
 extension ListViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return spendings.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return spendings.count
+        return spendings[section].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpendingCell", for: indexPath)
 
-        let spending = spendings[indexPath.row]
+        let spending = spendings[indexPath.section][indexPath.row]
         cell.textLabel?.text = spending.content
         cell.detailTextLabel?.text = "\(spending.amount) \(SettingsService.currency)"
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        // get the person's name
+        guard let person = spendings[section].first?.person, let name = person.name else {
+            return nil
+        }
+
+        // get spendings amount
+        var totalAmount = 0.0
+        for spending in spendings[section] {
+            totalAmount += spending.amount
+        }
+
+        // return name, amount and currency
+        return name + " (\(totalAmount) \(SettingsService.currency))"
     }
 }
