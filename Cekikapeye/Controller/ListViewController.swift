@@ -11,8 +11,11 @@ import UIKit
 class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
+    var spendings = Spending.all
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        spendings = Spending.all
         tableView.reloadData()
     }
 }
@@ -23,13 +26,13 @@ extension ListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SpendingService.shared.spendings.count
+        return spendings.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpendingCell", for: indexPath)
 
-        let spending = SpendingService.shared.spendings[indexPath.row]
+        let spending = spendings[indexPath.row]
         cell.textLabel?.text = spending.content
         cell.detailTextLabel?.text = "\(spending.amount) \(SettingsService.currency)"
 

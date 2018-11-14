@@ -23,9 +23,26 @@ class AddSpendingViewController: UIViewController {
                 return
         }
 
-        let spending = Spending(content: content, amount: amount)
-        SpendingService.shared.add(spending: spending)
+        // create entity in a context
+        let spending = Spending(context: AppDelegate.viewContext)
+        // give values to its properties
+        spending.content = content
+        spending.amount = amount
+        // use relationship attribute to get a value
+        spending.person = getPerson()
+        // save context
+        try? AppDelegate.viewContext.save()
+
         navigationController?.popViewController(animated: true)
+    }
+
+    private func getPerson() -> Person? {
+        if persons.count > 0 {
+            let index = personPickerView.selectedRow(inComponent: 0)
+            return persons[index]
+        } else {
+            return nil
+        }
     }
 }
 
