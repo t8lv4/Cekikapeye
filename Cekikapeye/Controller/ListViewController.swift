@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -53,5 +54,22 @@ extension ListViewController: UITableViewDataSource {
 
         // return name, amount and currency
         return name + " (\(totalAmount) \(SettingsService.currency))"
+    }
+
+}
+// delete cells
+extension ListViewController {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // delete core data object
+            AppDelegate.viewContext.delete(spendings[indexPath.section][indexPath.row])
+            try! AppDelegate.viewContext.save()
+
+            // delete the corresponding spendings value
+            spendings[indexPath.section].remove(at: indexPath.row)
+
+            // delete cell
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }
